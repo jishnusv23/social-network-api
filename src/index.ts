@@ -14,6 +14,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(morgan("dev"));
 app.use('/api/auth',authRouter)
+app.use('/api/friend',authRouter)
+app.use('/api/user',authRouter)
 app.use(errorHandler)
 
 app.listen(port, async() => {
